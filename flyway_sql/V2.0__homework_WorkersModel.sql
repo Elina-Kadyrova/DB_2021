@@ -13,7 +13,7 @@ CREATE TABLE employee
     phone_num VARCHAR(12) NOT NULL UNIQUE,
     email VARCHAR(50) NOT NULL UNIQUE,
     position INT NOT NULL,
-    FOREIGN KEY (position) REFERENCES position (id)
+    FOREIGN KEY (position) REFERENCES position (position_id)
 );
 create table manager
 (
