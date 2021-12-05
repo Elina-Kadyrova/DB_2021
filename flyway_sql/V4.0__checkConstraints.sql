@@ -1,0 +1,3 @@
+ALTER TABLE employee ADD CONSTRAINT valid_email CHECK (email ~ '^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$');
+ALTER TABLE employee ADD CONSTRAINT valid_phone_num CHECK (length(phone_num) <= 15);
+ALTER TABLE employee ADD CONSTRAINT valid_name CHECK (length(name) >= 2 AND length(name) <= 50 AND length(surname) >= 2 AND length(surname) <= 50 AND length(patronymic) >= 2 AND length(patronymic) <= 50);
